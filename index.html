@@ -1,9 +1,9 @@
-Place<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IT Consulting & Services for Small Businesses.">
+    <meta name="description" content="IT Consulting & Services for Small to Medium Businesses.">
     <title>FrankenTech LLC - IT Consulting & Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -61,7 +61,7 @@ Place<!DOCTYPE html>
         }
         .services .service-card {
             display: inline-block;
-            width: 28%;
+            width: 45%;
             padding: 20px;
             margin: 10px;
             background-color: #f1f1f1;
@@ -80,6 +80,31 @@ Place<!DOCTYPE html>
         .services .service-card p {
             font-size: 1.1em;
             color: #666;
+        }
+
+        /* Past Projects Section */
+        .projects {
+            background-color: #e6f0ff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .projects h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .projects .project-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .projects .project-gallery img {
+            width: 30%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .projects .project-gallery img:hover {
+            transform: scale(1.05);
         }
 
         /* Team Section */
@@ -193,7 +218,7 @@ Place<!DOCTYPE html>
 
     <!-- Header -->
     <header>
-        <h1>FrankenTech LLC.</h1>
+        <h1>FrankenTech LLC</h1>
         <p>IT Consulting & Managed Services</p>
     </header>
 
@@ -201,6 +226,7 @@ Place<!DOCTYPE html>
     <nav>
         <a href="#">Home</a>
         <a href="#services">Services</a>
+        <a href="#projects">Past Projects</a>
         <a href="#team">Our Team</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
@@ -215,11 +241,17 @@ Place<!DOCTYPE html>
         </div>
         <div class="service-card">
             <h3>Managed IT Services</h3>
-            <p>Complete IT support for your business, ensuring system reliability, Peformance and security.</p>
+            <p>Complete IT support for your business, ensuring system reliability, Performance and security.</p>
         </div>
-        <div class="service-card">
-            <h3>Cloud Solutions</h3>
-            <p>Scalable and secure cloud computing solutions to help your business grow.</p>
+    </section>
+
+    <!-- Past Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Past Projects</h2>
+        <div class="project-gallery">
+            <img src="https://via.placeholder.com/600x400" alt="Project 1">
+            <img src="https://via.placeholder.com/600x400" alt="Project 2">
+            <img src="https://via.placeholder.com/600x400" alt="Project 3">
         </div>
     </section>
 
@@ -229,7 +261,7 @@ Place<!DOCTYPE html>
         <div class="team-member">
             <img src="https://via.placeholder.com/200" alt="Team Member 1">
             <h3>Frank Kelly</h3>
-            <p>Owner and operator of FrankenTech LLC.</p>
+            <p>Owner and operator of FrankenTech LLC</p>
         </div>
         <div class="team-member">
             <img src="https://via.placeholder.com/200" alt="Team Member 2">
@@ -247,11 +279,11 @@ Place<!DOCTYPE html>
     <section id="testimonials" class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-card">
-            <blockquote>"FrankenTech helped us manage our IT infastructure and optimize our self hosted virtualization and storage platform as well as our network conncectivity. We highly reccomend them if you are needing profetional services to help or manage your systems!"</blockquote>
-            <cite>- Placeholder Name - Placeholder Business Name</cite>
+            <blockquote>"FrankenTech helped us streamline our IT infrastructure, saving us time and money. Highly recommend!"</blockquote>
+            <cite>- Sarah Brown, CEO of GreenTech Solutions</cite>
         </div>
         <div class="testimonial-card">
-            <blockquote>"The team at Tech Solutions provided expert advice that enabled our business to transition to the cloud seamlessly."</blockquote>
+            <blockquote>"The team at FrankenTech provided expert advice that enabled our business to transition to the cloud seamlessly."</blockquote>
             <cite>- Mark Wilson, COO of Retail World</cite>
         </div>
     </section>
@@ -259,7 +291,7 @@ Place<!DOCTYPE html>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="#" method="POST">
+        <form action="contact-form.php" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -269,7 +301,7 @@ Place<!DOCTYPE html>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 FrankenTech LLC. | All Rights Reserved</p>
+        <p>&copy; 2024 FrankenTech LLC | All Rights Reserved</p>
     </footer>
 
 </body>
