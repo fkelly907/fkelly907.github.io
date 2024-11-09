@@ -1,2 +1,173 @@
-Hello World, my name is Frank
-this is a test, from within the browser
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photography Portfolio - Showcasing stunning photos of various subjects.">
+    <title>Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact form button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact form button:hover {
+            background-color: #e68a00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>John Doe Photography</h1>
+        <p>Capturing Moments in Time</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="gallery">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 1">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 2">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 3">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 4">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 5">
+        <img src="https://via.placeholder.com/800x600" alt="Photography 6">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m John Doe, a passionate photographer with a love for capturing the beauty of the world. With over 10 years of experience, I specialize in portrait, landscape, and event photography. Every photograph is a story, and I strive to tell yours through the lens of my camera.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 John Doe Photography | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
