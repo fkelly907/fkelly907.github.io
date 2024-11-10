@@ -7,7 +7,7 @@
     <title>FrankenTech LLC - IT Consulting & Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        /* Default Light Mode Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -15,27 +15,20 @@
             background-color: #f5f5f5;
             color: #333;
         }
+
         header {
             background-color: #003366;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
 
-        /* Navigation Bar */
         nav {
             background-color: #004080;
             padding: 10px 0;
             text-align: center;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -44,155 +37,37 @@
             font-weight: 500;
             text-transform: uppercase;
         }
+
         nav a:hover {
             background-color: #003366;
             border-radius: 5px;
         }
 
-        /* Services Section */
-        .services {
-            background-color: #ffffff;
+        .services, .projects, .team, .testimonials, .contact {
             padding: 50px 20px;
             text-align: center;
         }
-        .services h2 {
+
+        .services, .projects, .team, .testimonials, .contact {
+            background-color: #ffffff;
+        }
+
+        .services h2, .projects h2, .team h2, .testimonials h2, .contact h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        .services .service-card {
+
+        .service-card, .team-member, .testimonial-card {
             display: inline-block;
-            width: 45%;
             padding: 20px;
-            margin: 10px;
             background-color: #f1f1f1;
+            margin: 10px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .services .service-card:hover {
-            transform: scale(1.05);
-        }
-        .services .service-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        .services .service-card p {
-            font-size: 1.1em;
-            color: #666;
         }
 
-        /* Past Projects Section */
-        .projects {
-            background-color: #e6f0ff;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .projects h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .projects .project-gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .projects .project-gallery img {
-            width: 30%;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        .projects .project-gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Team Section */
-        .team {
-            background-color: #e6f0ff;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .team h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .team .team-member {
-            display: inline-block;
-            width: 28%;
-            margin: 10px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .team .team-member img {
-            width: 100%;
-            border-radius: 50%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .team .team-member h3 {
-            margin-top: 10px;
-            font-size: 1.5em;
-        }
-        .team .team-member p {
-            font-size: 1.1em;
-            color: #444;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .testimonials h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .testimonials .testimonial-card {
-            display: inline-block;
-            width: 45%;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            text-align: left;
-        }
-        .testimonials .testimonial-card blockquote {
-            font-size: 1.2em;
-            color: #444;
-            margin: 20px 0;
-        }
-        .testimonials .testimonial-card cite {
-            display: block;
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #333;
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: #003366;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .contact h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .contact form input, .contact form textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1.1em;
-        }
-        .contact form button {
+        button {
             background-color: #ff6600;
             color: white;
             padding: 15px 30px;
@@ -201,25 +76,69 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .contact form button:hover {
+
+        button:hover {
             background-color: #cc5200;
         }
 
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        body.dark-mode header {
+            background-color: #1a1a1a;
+        }
+
+        body.dark-mode nav {
+            background-color: #333333;
+        }
+
+        body.dark-mode .services,
+        body.dark-mode .projects,
+        body.dark-mode .team,
+        body.dark-mode .testimonials,
+        body.dark-mode .contact {
+            background-color: #1a1a1a;
+        }
+
+        body.dark-mode button {
+            background-color: #ff8000;
+        }
+
+        body.dark-mode h1, 
+        body.dark-mode h2, 
+        body.dark-mode h3, 
+        body.dark-mode p, 
+        body.dark-mode blockquote, 
+        body.dark-mode cite {
+            color: #f5f5f5;
+        }
+
+        body.dark-mode a {
+            color: #ff6600;
+        }
+
+        body.dark-mode a:hover {
+            color: #ff8000;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             background-color: #003366;
             color: white;
             padding: 20px;
         }
-
     </style>
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Header with Theme Toggle Button -->
     <header>
         <h1>FrankenTech LLC</h1>
         <p>IT Consulting & Managed Services</p>
+        <button id="theme-toggle">🌙 Switch to Dark Mode</button> <!-- Button to toggle dark mode -->
     </header>
 
     <!-- Navigation -->
@@ -241,7 +160,7 @@
         </div>
         <div class="service-card">
             <h3>Managed IT Services</h3>
-            <p>Complete IT support for your business, ensuring system reliability, Performance and security.</p>
+            <p>Complete IT support for your business, ensuring system performance, reliability and security.</p>
         </div>
     </section>
 
@@ -261,7 +180,7 @@
         <div class="team-member">
             <img src="https://via.placeholder.com/200" alt="Team Member 1">
             <h3>Frank Kelly</h3>
-            <p>Owner and operator of FrankenTech LLC</p>
+            <p>Owner and operator</p>
         </div>
         <div class="team-member">
             <img src="https://via.placeholder.com/200" alt="Team Member 2">
@@ -292,17 +211,4 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form action="contact-form.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 FrankenTech LLC | All Rights Reserved</p>
-    </footer>
-
-</body>
-</html>
+            <input type="
